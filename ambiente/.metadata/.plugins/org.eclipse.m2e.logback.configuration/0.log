@@ -724,3 +724,4 @@
 2019-04-01 20:25:21,288 [Worker-11: Updating Maven Project] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for semillero-servicios
 2019-04-01 20:25:21,294 [Worker-11: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 54 sec
 2019-04-01 20:27:52,483 [Worker-13: reload maven project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/semillero-web: com.hbt.semillero.web:semillero-web:1.0-SNAPSHOT with classifier  to /semillero-web/target/classes
+2019-04-01 20:27:52,483 [Worker-13: reload maven project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/semillero-servicios: com.hbt.semillero.servicios:semillero-servicios:1.0-SNAPSHOT with classifier  to /semillero-servicios/target/classes
