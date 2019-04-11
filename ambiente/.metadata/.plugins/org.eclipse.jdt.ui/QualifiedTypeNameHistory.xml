@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="ejemplosDiaDos.pruebainterfaz"/>
+<fullyQualifiedTypeName name="javax.ejb.Stateless"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+<fullyQualifiedTypeName name="javax.persistence.PersistenceContext"/>
+<fullyQualifiedTypeName name="javax.ejb.TransactionAttribute"/>
+<fullyQualifiedTypeName name="javax.ejb.TransactionAttributeType"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Path"/>
+<fullyQualifiedTypeName name="javax.ejb.EJB"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.MediaType"/>
+<fullyQualifiedTypeName name="javax.ws.rs.GET"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Produces"/>
+<fullyQualifiedTypeName name="com.hbt.semillero.dto.MarcaDTO"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="javax.ejb.Local"/>
+<fullyQualifiedTypeName name="com.hbt.semillero.entidades.Marca"/>
+<fullyQualifiedTypeName name="com.hbt.semillero.dto.LineaDTO"/>
+<fullyQualifiedTypeName name="com.hbt.semillero.entidades.Linea"/>
+<fullyQualifiedTypeName name="javax.ws.rs.QueryParam"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="com.hbt.semillero.dto.ResultadoDTO"/>
+<fullyQualifiedTypeName name="javax.ws.rs.POST"/>
+<fullyQualifiedTypeName name="com.hbt.semillero.entidades.Persona"/>
+<fullyQualifiedTypeName name="com.hbt.semillero.dto.PersonaDTO"/>
+<fullyQualifiedTypeName name="com.hbt.semillero.entidades.Comprador"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="com.hbt.semillero.entidades.Vendedor"/>
+<fullyQualifiedTypeName name="com.hbt.semillero.servicios.interfaces.IConsultasBeanLocal"/>
+<fullyQualifiedTypeName name="javax.persistence.Query"/>
 </qualifiedTypeNameHistroy>
