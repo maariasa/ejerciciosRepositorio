@@ -1,0 +1,358 @@
+<form>
+	<input type="button" value="Mostrar Formulario" (click)="mostrar()" />
+	<br/>
+	<input type="button" value="Ocultar Formulario" (click)="ocultar()" />
+
+	<section>
+      <label for="name">Nombre Persona</label>
+      <input name="name" type="text"  placeholder="Nombre persona" />
+    </section>
+    <input type="submit" value="Guardar" (click)="guardar()">
+
+    <ul *ngIf ="personas.length>0; else 'empty'"> <!--Pregunta si el arreglo es mayor a 0 para mostrar la tabla-->
+      <li *ngFor ="let per of personas"> <!--Ciclo-->
+        <span> {{per.nombre | lowercase}}</span>
+        <span> {{per.apellido | uppercase}} </span>
+        <input value="Borrar" type="button" (click)="borrar(per)">
+      </li>
+    </ul>
+
+    <pre>{{ persona | json }}</pre>
+	
+</form>
+
+<!--Formato de los prototipos-->
+<!--Prototipo 1-->
+
+<!--
+    <ul *ngIf ="personas.length>0; else 'empty'"> 
+      <li *ngFor ="let per of personas">
+        <span> {{per.nombre | lowercase}}</span>
+        <span> {{per.apellido | uppercase}} </span>
+        <input value="Borrar" type="button" (click)="borrar(per)">
+      </li>
+    </ul>
+-->
+
+<!--
+<div ng-app="">
+  <h1></h1>
+  <p class="description">Click on the "show"-link to see the content.</p>
+  <a href="" ng-click="showme=true">Show</a>
+  <button ng-click="showme=false">Hide</button> 
+  
+  <div class="wrapper">
+    <p ng-hide="showme">It will appear here!</p>
+    <h2 ng-show="showme">This is mah content, yo!</h2>
+  </div>
+  
+</div>    
+-->
+<h2>Prototipos</h2>
+
+
+<div ng-app="DemoApp" ng-controller="DemoController">
+    <input type="button" value="Gestión" ng-click="ShowHide()"/>
+
+    <br><br><div ng-show = "IsVisible">
+    	<div class="container">
+	<div class="card">
+		<div class="card-body">
+			<div>
+				<h2>Gestionar Personas</h2>
+			</div>
+			<form>
+				<div class="row">
+					<div class="col-md-4">
+						<label for="tipo_id">Tipo Identificación</label>
+						<br/>
+						<select name="tipo_id">
+							<option value="placeholder">Placeholder</option>
+						</select>
+					</div>
+					<div class="col-md-8">
+						<label for="num_id">Número de Identificación</label>
+						<br/>
+						<input type="text" name="num_id" placeholder="Ingrese su número...">
+					</div>
+				</div>
+				<br/>
+				<br/>
+				<div class="row">
+					<div class="col-md-2">
+						<input type="submit" name="" value="Consultar"/>
+					</div>
+				</div>
+				
+			</form>
+			<br/>
+			<table class="table">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Nombres</th>
+						<th scope="col">Apellidos</th>
+						<th scope="col">Núm. Identificación</th>
+						<th scope="col">Tipo Identificación</th>
+						<th scope="col">Número Telefónico</th>
+						<th scope="col">Edad</th>
+						<th scope="col">Estado</th>
+					</tr>
+				</thead>
+				<tbody class="text-lowercase">
+						<td>
+							<p>-</p>
+						</td>
+						<td>
+							<p>-</p>
+						</td>
+						<td>
+							<p>-</p>
+						</td>
+						<td>
+							<p>-</p>
+						</td>
+						<td>
+							<p>-</p>
+						</td>
+						<td>
+							<p>-</p>
+						</td>
+						<td>
+							<p>-</p>
+						</td>
+				</tbody>
+			</table>
+		</div>
+		
+	</div>
+</div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    var app = angular.module('DemoApp',[]);
+
+    app.controller('DemoController',function($scope){
+        $scope.IsVisible = false;
+
+        $scope.ShowHide = function(){
+            $scope.IsVisible = $scope.IsVisible = true;
+        }
+        });
+</script>
+
+<br/>
+
+<div ng-app="DemoApp" ng-controller="DemoController">
+    <input type="button" value="Crear" ng-click="ShowHide()"/>
+
+    <br><br><div ng-show = "IsVisible">
+    	<div class="container">
+	<div class="card">
+		<div class="card-body">
+			<div class="card-title">
+				<h2>Crear Persona</h2>
+			</div>
+			<form>
+				<div class="row">
+					<div class="col-md-4">
+						<label>Tipo Identificación</label>
+						<br/><select name="tipo_id" id="tipo_id">
+							<option name="placeholder">Placeholder</option>
+						</select>
+					</div>
+					<div class="col-md-4">
+						<label for="num_id">Número de Identificación</label>
+						<input type="text" name="num_id" placeholder="Ingrese su número de ID...">
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<div class="col-md-4">
+						<label for="nombre_per">Nombres</label>
+						<br/>
+						<input type="text" name="nombre_per" placeholder="Ingrese su nombre...">
+					</div>
+					<div class="col-md-4">
+						<label for="apellido">Apellidos</label>
+						<br/>
+						<input type="text" name="apellido" placeholder="Ingrese su apellido...">
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<br/>
+					<div class="col-md-4">
+						<label for="num_tel">Número Telefónico</label>
+						<br/>
+						<input type="text" name="num_tel" placeholder="Ingrese su teléfono...">
+					</div>
+					<div class="col-md-4">
+						<label for="edad">Edad</label>
+						<br/>
+						<input type="text" name="edad" maxlength="3" placeholder="Ingrese su edad...">
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<br/>
+					<div class="col-md-4">
+						<label for="estado">Estado</label>
+						<br/>
+						<select name="estado">
+							<option value="placeholder">Placeholder</option>
+						</select>
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<div class="col-md-4">
+						<label for="sexo">Género</label>
+						<br/>
+						<input type="checkbox" name="sexo">Hombre
+						<input type="checkbox" name="sexo2">Mujer
+					</div>
+					<div class="col-md-4">
+						<label for="rol">Roles</label>
+						<br/>
+						<input type="checkbox" name="rol">Comprador
+						<input type="checkbox" name="rol2">Vendedor						
+					</div>
+				</div>
+				<br/>
+				<input type="submit" name="" value="Ingresar" (click)="guardar()">
+			</form>
+		</div>
+	</div>
+</div>
+<br/>
+
+
+
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    var app = angular.module('DemoApp',[]);
+
+    app.controller('DemoController',function($scope){
+        $scope.IsVisible = false;
+
+        $scope.ShowHide = function(){
+            $scope.IsVisible = $scope.IsVisible = true;
+        }
+        });
+</script>
+<br/>
+<div ng-app="DemoApp" ng-controller="DemoController">
+    <input type="button" value="Editar" ng-click="ShowHide()"/>
+
+    <br><br><div ng-show = "IsVisible">
+<div class="container">
+	<div class="card">
+		<div class="card-body">
+			<div class="card-title">
+				<h2>Editar Persona</h2>
+			</div>
+			<form>
+				<div class="row">
+					<div class="col-md-4">
+						<label>Tipo Identificación</label>
+						<br/><select name="tipo_id" id="tipo_id">
+							<option name="placeholder">Placeholder</option>
+						</select>
+					</div>
+					<div class="col-md-4">
+						<label for="num_id">Número de Identificación</label>
+						<input type="text" name="num_id" placeholder="Ingrese su número de ID...">
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<div class="col-md-4">
+						<label for="nombre_per">Nombres</label>
+						<br/>
+						<input type="text" name="nombre_per" placeholder="Ingrese su nombre...">
+					</div>
+					<div class="col-md-4">
+						<label for="apellido">Apellidos</label>
+						<br/>
+						<input type="text" name="apellido" placeholder="Ingrese su apellido...">
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<br/>
+					<div class="col-md-4">
+						<label for="num_tel">Número Telefónico</label>
+						<br/>
+						<input type="text" name="num_tel" placeholder="Ingrese su teléfono...">
+					</div>
+					<div class="col-md-4">
+						<label for="edad">Edad</label>
+						<br/>
+						<input type="text" name="edad" maxlength="3" placeholder="Ingrese su edad...">
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<br/>
+					<div class="col-md-4">
+						<label for="estado">Estado</label>
+						<br/>
+						<select name="estado">
+							<option value="placeholder">Placeholder</option>
+						</select>
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<div class="col-md-4">
+						<label for="sexo">Género</label>
+						<br/>
+						<input type="ratio" name="sexo">
+						<!--<input type="checkbox" name="sexo">Hombre
+						<input type="checkbox" name="sexo2">Mujer-->
+					</div>
+					<div class="col-md-4">
+						<label for="rol">Roles</label>
+						<br/>
+						<input type="checkbox" name="rol">Comprador
+						<input type="checkbox" name="rol2">Vendedor						
+					</div>
+				</div>
+				<br/>
+				<input type="submit" name="" value="Editar" (click)="guardar()">
+			</form>
+		</div>
+	</div>
+</div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    var app = angular.module('DemoApp',[]);
+
+    app.controller('DemoController',function($scope){
+        $scope.IsVisible = false;
+
+        $scope.ShowHide = function(){
+            $scope.IsVisible = $scope.IsVisible = true;
+        }
+        });
+</script>
+
+
+
+<br/>
+<br/>
+
+
+<!--Prototipo 2 - Crear Persona-->
+
+
+<!--Prototipo 3-->

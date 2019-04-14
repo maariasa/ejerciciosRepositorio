@@ -1,91 +1,109 @@
-/**
- * LineaDTO.java
- */
 package com.hbt.semillero.dto;
 
 import java.io.Serializable;
 
 /**
- *  Clase que determina la línea de los automóviles
+ * Objeto de transferencia que mapea los atributos de la entidad Linea
+ * 
+ * @author Johnny Soto
+ *
  */
-public class LineaDTO implements Serializable{
-	
-	//ID de la línea
+public class LineaDTO implements Serializable {
+
+	/**
+	 * Serial
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * Identificador único de la línea
+	 */
 	private Long idLinea;
-	
-	//nombre de la línea
+
+	/**
+	 * Nombre de la línea.
+	 */
 	private String nombre;
-	
-	//cilindraje de la línea
+	/**
+	 * Cilindraje
+	 */
 	private int cilindraje;
-	
-	//Marca de la línea (de la clase MarcaDTO)
+
+	/**
+	 * Marca
+	 */
 	private MarcaDTO marca;
 
 	/**
-	 * Metodo encargado de retornar el valor del atributo idLinea
-	 * @return El idLinea asociado a la clase
+	 * Método que obtiene el valor de la propiedad idLinea
+	 * 
+	 * @return the idLinea
 	 */
 	public Long getIdLinea() {
 		return idLinea;
 	}
 
 	/**
-	 * Metodo encargado de modificar el valor del atributo idLinea
-	 * @param idLinea El nuevo idLinea a modificar.
+	 * Método que asigna el valor de la propiedad idLinea
+	 * 
+	 * @param idLinea the idLinea to set
 	 */
 	public void setIdLinea(Long idLinea) {
 		this.idLinea = idLinea;
 	}
 
 	/**
-	 * Metodo encargado de retornar el valor del atributo nombre
-	 * @return El nombre asociado a la clase
+	 * Método que obtiene el valor de la propiedad nombre
+	 * 
+	 * @return the nombre
 	 */
 	public String getNombre() {
 		return nombre;
 	}
 
 	/**
-	 * Metodo encargado de modificar el valor del atributo nombre
-	 * @param nombre El nuevo nombre a modificar.
+	 * Método que asigna el valor de la propiedad nombre
+	 * 
+	 * @param nombre the nombre to set
 	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
 	/**
-	 * Metodo encargado de retornar el valor del atributo cilindraje
-	 * @return El cilindraje asociado a la clase
+	 * Método que obtiene el valor de la propiedad cilindraje
+	 * 
+	 * @return the cilindraje
 	 */
 	public int getCilindraje() {
 		return cilindraje;
 	}
 
 	/**
-	 * Metodo encargado de modificar el valor del atributo cilindraje
-	 * @param cilindraje El nuevo cilindraje a modificar.
+	 * Método que asigna el valor de la propiedad cilindraje
+	 * 
+	 * @param cilindraje the cilindraje to set
 	 */
 	public void setCilindraje(int cilindraje) {
 		this.cilindraje = cilindraje;
 	}
 
 	/**
-	 * Metodo encargado de retornar el valor del atributo marca
-	 * @return El marca asociado a la clase
+	 * Método que obtiene el valor de la propiedad marca
+	 * 
+	 * @return the marca
 	 */
 	public MarcaDTO getMarca() {
 		return marca;
 	}
 
 	/**
-	 * Metodo encargado de modificar el valor del atributo marca
-	 * @param marca El nuevo marca a modificar.
+	 * Método que asigna el valor de la propiedad marca
+	 * 
+	 * @param marca the marca to set
 	 */
 	public void setMarca(MarcaDTO marca) {
 		this.marca = marca;
 	}
-	
-	
 
 }

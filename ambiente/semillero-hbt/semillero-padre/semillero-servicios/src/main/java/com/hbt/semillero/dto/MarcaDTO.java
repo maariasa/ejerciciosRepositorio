@@ -3,48 +3,61 @@ package com.hbt.semillero.dto;
 import java.io.Serializable;
 
 /**
- * Clase que determina la Marca de los automóviles
+ * Objeto de transferencia que mapea los atributos de la entidad Marca
+ * 
+ * @author Johnny Soto
+ *
  */
-public class MarcaDTO implements Serializable{
+public class MarcaDTO implements Serializable {
+	/**
+	 * Serial
+	 */
+	private static final long serialVersionUID = 1L;
 
-	//ID de la Marca
+	/**
+	 * Identificar único de la marca.
+	 */
 	private Long idMarca;
-	
-	//Nombre de la Marca
+
+	/**
+	 * Nombre de la Marca
+	 */
 	private String nombre;
 
 	/**
-	 * Metodo encargado de retornar el valor del atributo idMarca
-	 * @return El idMarca asociado a la clase
+	 * Método que obtiene el valor de la propiedad idMarca
+	 * 
+	 * @return the idMarca
 	 */
 	public Long getIdMarca() {
 		return idMarca;
 	}
 
 	/**
-	 * Metodo encargado de modificar el valor del atributo idMarca
-	 * @param idMarca El nuevo idMarca a modificar.
+	 * Método que asigna el valor de la propiedad idMarca
+	 * 
+	 * @param idMarca the idMarca to set
 	 */
 	public void setIdMarca(Long idMarca) {
 		this.idMarca = idMarca;
 	}
 
 	/**
-	 * Metodo encargado de retornar el valor del atributo nombre
-	 * @return El nombre asociado a la clase
+	 * Método que obtiene el valor de la propiedad nombre
+	 * 
+	 * @return the nombre
 	 */
 	public String getNombre() {
 		return nombre;
 	}
 
 	/**
-	 * Metodo encargado de modificar el valor del atributo nombre
-	 * @param nombre El nuevo nombre a modificar.
+	 * Método que asigna el valor de la propiedad nombre
+	 * 
+	 * @param nombre the nombre to set
 	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	
-	
 
 }
